@@ -3,10 +3,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // TELEGRAM BOT SOZLAMALARI
-const TOKEN = "8887326747:AAEd1KCDpbgwoSICBzePyHwnhL8Phke8nVM"; // O'zingizning bot tokeningiz
-const CHAT_ID = "8805463428"; // Siz bergan Telegram ID
-// asdfgoihfiorhg
-// asdf
+const TOKEN = "8887326747:AAEd1KCDpbgwoSICBzePyHwnhL8Phke8nVM";
+const CHAT_ID = "8805463428";
 
 const content = {
   uz: {
@@ -196,7 +194,7 @@ export default function App() {
               color: darkMode ? "#ffffff" : "#111827",
               border: "1px solid #ef4444",
             },
-          }
+          },
         );
       }
     } catch (error) {
@@ -351,8 +349,12 @@ export default function App() {
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
           <img
-            src="/profile.png"
+            src="/profile.webp"
             alt="Muhammadrizo Turgunov"
+            fetchpriority="high"
+            loading="eager"
+            width="288"
+            height="384"
             className="relative w-72 h-96 object-cover rounded-2xl shadow-2xl border-2 border-red-500/30"
           />
         </div>
@@ -445,8 +447,12 @@ export default function App() {
               onClick={() => setModalOpen(true)}
             >
               <img
-                src="/cert.png"
+                src="/cert.webp"
                 alt="MARS IT School Frontend Certificate"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
                 className="w-full h-auto rounded-2xl transition duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold">
@@ -482,8 +488,9 @@ export default function App() {
               ✕
             </button>
             <img
-              src="/cert.png"
+              src="/cert.webp"
               alt="Certificate Full"
+              loading="lazy"
               className="w-full h-auto rounded-xl border border-gray-700"
             />
           </div>

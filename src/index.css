@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
+@import "tailwindcss";
 
 /* Sahifa bir teks va tekkis bo'lishi hamda silliq tushishi uchun */
 html {
